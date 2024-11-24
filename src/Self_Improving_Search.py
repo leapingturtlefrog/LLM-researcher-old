@@ -5,10 +5,10 @@ from typing import List, Dict, Tuple, Union
 import logging
 import sys
 from io import StringIO
-from .web_scraper import get_web_content, can_fetch
-from .llm_config import get_llm_config
-from .llm_response_parser import UltimateLLMResponseParser
-from .llm_wrapper import LLMWrapper
+from web_scraper import get_web_content, can_fetch
+from llm_config import get_llm_config
+from llm_response_parser import UltimateLLMResponseParser
+from llm_wrapper import LLMWrapper
 from urllib.parse import urlparse
 
 # Set up logging

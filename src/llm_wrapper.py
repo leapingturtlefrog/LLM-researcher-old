@@ -1,5 +1,5 @@
 import openai
-from .llm_config import get_llm_config
+from llm_config import get_llm_config
 
 class LLMWrapper:
     def __init__(self, preset_name):

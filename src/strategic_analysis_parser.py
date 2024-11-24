@@ -32,6 +32,10 @@ class AnalysisResult:
         if not self.timestamp:
             self.timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+class StrategicAnalysisParser:
+    def __init__(self):
+        pass
+
 # Set up logging
 # logger = logging.getLogger(__name__)
 

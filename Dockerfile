@@ -7,4 +7,5 @@ WORKDIR /usr
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY . .
+ENV PYTHONPATH=/usr/src
 CMD ["python", "-m", "src.__main__"]

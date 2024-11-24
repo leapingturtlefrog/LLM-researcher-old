@@ -17,11 +17,13 @@ from threading import Event
 from urllib.parse import urlparse
 from pathlib import Path
 
+'''
 # Initialize colorama for cross-platform color support
 if os.name == 'nt':  # Windows-specific initialization
     init(convert=True, strip=False, wrap=True)
 else:
     init()
+'''
 
 # Set up logging
 # log_directory = 'logs'
