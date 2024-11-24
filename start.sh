@@ -1,18 +1,16 @@
 #!/bin/bash
 
-# Check if venv directory exists
-if [ ! -d "venv" ]; then
-  # Create virtual environment called venv
-  python3 -m venv venv
+# Run with the command './start.sh'
+# Builds the Docker image and runs a new container.
+
+IMAGE_NAME=image_a
+CONTAINER_NAME=container_a
+if [ "$(docker ps -aq -f name=$CONTAINER_NAME)" ]; then
+        echo "Starting..."
+        docker start $CONTAINER_NAME
+else
+        echo "Building new Docker image"
+        docker build -t $IMAGE_NAME .
+        echo "Starting..."
+        docker run --name $CONTAINER_NAME --rm -it $IMAGE_NAME
 fi
-
-# Activate the virtual environment
-source venv/bin/activate
-
-# Install required packages from requirements.txt
-pip install -r "src/requirements.txt"
-
-# Run the AI web researcher script
-python -m src
-
-deactivate
